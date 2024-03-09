@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/adminpanel.css" />
+    <title>Admin Panel</title>
+  </head>
+  <body>
+    <nav>
+      <div class="brand">
+        <section>
+          <div class="content">
+            <h2 class="content-title">DASHBOARD</h2>
+            <div class="box-container">
+              <div class="top">
+                <a href="admin-create-blog.html">
+                  <button class="btn-secondary">NEW ARTICLE</button>
+                </a>
+                <a href="displaymsg.html">
+                  <button class="btn-secondary">MESSAGES</button>
+                </a>
+                <button id="logout" class="btn-secondary">LOGOUT</button>
+              </div>
+              <div class="data">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Title</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </nav>
+    <script src="javascripts/blogs.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const logout = document.getElementById("logout");
+        console.log(logout);
+        logout.addEventListener("click", () => {
+          // localStorage.removeItem("token");
+          window.location.href = "index.html";
+        });
+      });
+    </script>
+  </body>
+</html>

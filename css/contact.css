@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+body {
+  background-color: #094193;
+  width: 100%;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10%;
+  align-items: center;
+}
+.logo {
+  position: relative;
+  font-size: 40px;
+  text-decoration: none;
+  color: orange;
+  font-weight: 600;
+}
+.navbar a {
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: 0.5s;
+}
+.navbar a:hover {
+  color: orange;
+}
+.contact-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 500px;
+  padding-left: 150px;
+  margin-top: 50px;
+}
+.contact-icons a {
+  width: 30px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: orange;
+  text-decoration: none;
+}
+.one {
+  border-left: 2px solid white;
+  height: 220px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+.two {
+  border-left: 2px solid white;
+  height: 100px;
+  margin-left: 10px;
+}
+.copy {
+  color: #fff;
+  padding-bottom: 120px;
+  margin-left: 6px;
+}
+.phone-number {
+  display: flex;
+  align-items: center;
+  /* gap: 1rem; */
+  margin-bottom: 30px;
+  color: #fff;
+}
+h2 {
+  color: orange;
+  text-align: left;
+  padding: 20px 0;
+}
+.phone-number img {
+  width: 1.5rem;
+}
+.active {
+  color: orange !important;
+}
+
+.mail-me {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.mail-me,
+.location {
+  img {
+    width: 1.5rem;
+  }
+}
+.location {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #094193;
+}
+
+form {
+  width: 500px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.input-control {
+  margin-bottom: 1rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 1px solid #808080;
+}
+
+input[type="submit"] {
+  background-color: orange;
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+#messageError {
+  color: red;
+  font-size: 14px;
+  margin: 0px;
+  transition-duration: 0.15s;
+}
+
+/* Media Queries for responsiveness
+@media screen and (max-width: 600px) {
+    form {
+        max-width: 100%;
+    } 
+  }*/
+
+.contact-general {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.form {
+  flex: 1;
+  padding: 0 2rem;
+}
+
+.contact-section {
+  flex: 1;
+  padding: 0 2rem;
+}

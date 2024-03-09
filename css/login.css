@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+body {
+  background-color: #094193;
+  width: 100%;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10%;
+  align-items: center;
+}
+.logo {
+  position: relative;
+  font-size: 40px;
+  text-decoration: none;
+  color: orange;
+  font-weight: 600;
+}
+.navbar a {
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: 0.5s;
+}
+.navbar a:hover {
+  color: orange;
+}
+.contact-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 500px;
+  padding-left: 150px;
+  margin-top: 50px;
+}
+.contact-icons a {
+  width: 30px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: orange;
+  text-decoration: none;
+}
+.one {
+  border-left: 2px solid white;
+  height: 220px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+.two {
+  border-left: 2px solid white;
+  height: 100px;
+  margin-left: 10px;
+}
+.copy {
+  color: #fff;
+  padding-bottom: 120px;
+  margin-left: 6px;
+}
+.active {
+  color: orange !important;
+}
+.login-container {
+  background-color: white;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 400px;
+  height: 250px;
+  margin-right: 100px;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group button {
+  width: 100%;
+  display: block;
+  padding: 10px 40px;
+  background-color: orange;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-general {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.content {
+  padding-right: 190px;
+}

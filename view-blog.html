@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article</title>
+    <link rel="stylesheet" href="css/Blog.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div>
+        <a href="#" class="logo">Sophie.</a>
+      </div>
+      <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html" class="active">Blogs</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact Me</a>
+        <a href="login.html">Login</a>
+      </div>
+    </div>
+    <div id="blog" class="display"></div>
+    <div id="comments">
+      <h2>Comments</h2>
+      <form id="comment-form">
+        <input type="text" id="comment" placeholder="Comment" />
+        <button type="submit">Submit</button>
+      </form>
+      <div id="message" class="display">
+        <p id="message-text">No comments</p>
+      </div>
+    </div>
+    <script src="./javascripts/display-blog.js"></script>
+  </body>
+</html>

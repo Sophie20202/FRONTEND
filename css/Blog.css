@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  background-color: #094193;
+  width: 100%;
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+}
+
+#blog,
+#comments {
+  max-width: 1000px;
+  margin-top: 1rem;
+  margin: 0 auto;
+
+  h2 {
+    margin-bottom: 1rem;
+    color: white;
+  }
+}
+
+#comments {
+  margin-top: 2rem;
+
+  input,
+  button {
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    border: 1px solid #ff9900;
+  }
+
+  button {
+    background-color: #ff9900;
+    font-weight: bold;
+  }
+
+  .display p {
+    padding: 0.5rem;
+  }
+}
+
+.display {
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10%;
+  align-items: center;
+}
+.logo {
+  position: relative;
+  font-size: 40px;
+  text-decoration: none;
+  color: orange;
+  font-weight: 600;
+}
+.navbar a {
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: 0.5s;
+}
+.navbar a:hover {
+  color: orange;
+}
+
+.about-blog {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.active {
+  color: orange !important;
+}
+.blog-content {
+  width: 100%;
+  height: 80vh;
+  align-items: center;
+}
+
+.blog-content a {
+  margin-top: 1rem;
+  color: orange;
+  display: block;
+}
+
+.blog-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 150px;
+}
+.blog-icons a {
+  width: 30px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: orange;
+  text-decoration: none;
+}
+.one {
+  border-left: 2px solid white;
+  height: 220px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+.two {
+  border-left: 2px solid white;
+  height: 100px;
+  margin-left: 10px;
+}
+.copy {
+  color: #fff;
+  padding-bottom: 120px;
+  margin-left: 6px;
+}
+.blog {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 2rem;
+
+  &:not(:last-child) {
+    border-bottom: 1px dashed #999999;
+  }
+}
+.blog .content h2 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.blog .content p {
+  line-height: 1.5;
+}
+
+img {
+  object-fit: cover;
+  object-position: center;
+  width: 300px;
+  height: 400px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #ff9900;
+  border: 1px solid #ff9900;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
