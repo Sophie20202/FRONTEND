@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
       blogContainer.innerHTML = `
           <div class="content">
               <h2>${data.data.title}</h2>
+              <img src="${data.data.image}">
               <p>${data.data.message}</p>
+              
           </div>
           `;
     })
