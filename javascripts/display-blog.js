@@ -8,15 +8,17 @@ document.addEventListener("DOMContentLoaded", () => {
       return response.json();
     })
     .then((data) => {
+      console.log(data.data)
       const blogContainer = document.getElementById("blog");
       blogContainer.innerHTML = `
           <div class="content">
               <h2>${data.data.title}</h2>
-              <img src="${data.data.image}">
+              <img src="${data.data.picture}">
               <p>${data.data.message}</p>
               
           </div>
           `;
+
     })
     .catch((error) => {
       console.error("Error fetching data:", error);
