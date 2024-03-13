@@ -1,4 +1,4 @@
-let link = "https://backend-jdw6.onrender.com/greet/v1/user/login"
+let link = "https://backend-jdw6.onrender.com/greet/v1/users/login"
 function validateForm(event) {
   event.preventDefault();
 

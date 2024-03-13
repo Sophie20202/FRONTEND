@@ -1,4 +1,4 @@
-fetch("https://backend-jdw6.onrender.com/greet/v1/contact")
+fetch("https://backend-jdw6.onrender.com/api/contacts")
   .then((response) => {
     if (!response.ok) {
       throw new Error("Network response was not ok");

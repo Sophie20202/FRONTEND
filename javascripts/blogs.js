@@ -3,7 +3,7 @@ function deleteBlog(id) {
   if (!confirmDelete) {
     return;
   }
-  fetch(`https://backend-jdw6.onrender.com/greet/v1/blog/${id}`, {
+  fetch(`https://backend-jdw6.onrender.com/api/blog/${id}`, {
     method: "DELETE",
   })
     .then((res) => res.json())
@@ -14,7 +14,7 @@ function deleteBlog(id) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("https://backend-jdw6.onrender.com/greet/v1/blog")
+  fetch("https://backend-jdw6.onrender.com/api/blogs")
     .then((res) => res.json())
     .then((data) => {
       localStorage.setItem("articles", JSON.stringify(data.data));

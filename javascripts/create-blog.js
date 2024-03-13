@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", function () {
     create.append("message", articleContent);
     create.append("image", blogImage);
 
-    fetch("https://backend-jdw6.onrender.com/greet/v1/blog", {
+    fetch("https://backend-jdw6.onrender.com/api/blogs", {
       method: "POST",
       headers: {
         "auth-token": `${localStorage.getItem("token")}`,
@@ -33,16 +33,4 @@ window.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
-// const processImage = (input) => {
-//   return new Promise((resolve, reject) => {
-//       if (input.files && input.files[0]) {
-//           const reader = new FileReader();
-//           reader.onload = function (e) {
-//               resolve(e.target.result);
-//           };
-//           reader.readAsDataURL(input.files[0]);
-//       } else {
-//           reject("No file selected");
-//       }
-//   });
-// };
+

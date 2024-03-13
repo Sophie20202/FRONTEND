@@ -14,7 +14,7 @@ function messageData() {
         message
     }
     console.log(messages)
-    const api = `https://backend-jdw6.onrender.com/greet/v1/contact`
+    const api = `https://backend-jdw6.onrender.com/api/contacts`
     const postman = {
         method: 'POST',
         headers: {

@@ -12,7 +12,7 @@ function update() {
     update.append("image", image.files[0]);
   }
 
-  fetch(`https://backend-jdw6.onrender.com/greet/v1/blog/${id}`, {
+  fetch(`https://backend-jdw6.onrender.com/api/blogs/${id}`, {
     method: "PUT",
     headers: {
       'auth-token': `${localStorage.getItem("token")}`,
