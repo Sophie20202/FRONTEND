@@ -14,7 +14,7 @@ function messageData() {
         message
     }
     console.log(messages)
-    const api = `https://backend-jdw6.onrender.com/api/contacts`
+    const api = `https://backend-jdw6.onrender.com/api/contacts/messages`
     const postman = {
         method: 'POST',
         headers: {
@@ -25,10 +25,13 @@ function messageData() {
     fetch(api,postman)
     .then(response=>{
         console.log(response.status)
+        document.getElementById("form").reset();
         return response.json()
     })
     .then((data)=>{
+        
         alert(data.message)
     })
+
 }
 

@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       blogContainer.innerHTML = `
           <div class="content">
               <h2>${data.data.title}</h2>
-              <img src="${data.data.picture}">
+              <img src="${data.data.image}">
               <p>${data.data.message}</p>
               
           </div>
@@ -35,7 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const blogcomment=async() => {
   const id = new URLSearchParams(window.location.search).get("id");
   const commentsContainer = document.querySelector("#comments .display");
-  await  fetch(`https://backend-jdw6.onrender.com/api/comments/${id}`, {
+  await  fetch(`https://backend-jdw6.onrender.com/api/blogs/${id}/comments`, {
+   
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -69,7 +70,7 @@ blogcomment()
 const countlikes=async() => {
   const id = new URLSearchParams(window.location.search).get("id");
   const commentsContainer = document.querySelector("#comments .display");
-  await  fetch(`https://backend-jdw6.onrender.com/api/likes/${id}`, {
+  await  fetch(`https://backend-jdw6.onrender.com/api/blogs/${id}/likes`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -98,7 +99,7 @@ const createlikes=async() => {
   dislike.removeAttribute("disabled")
   localStorage.setItem("bloglike",JSON.stringify(id))
   const commentsContainer = document.querySelector("#comments .display");
-  await  fetch(`https://backend-jdw6.onrender.com/api/likes/${id}`, {
+  await  fetch(`https://backend-jdw6.onrender.com/api/blogs/${id}/likes`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -126,7 +127,7 @@ const createdislikes=async() => {
   dislike.setAttribute("disabled","")
   localStorage.removeItem("bloglike",JSON.stringify(id))
   const commentsContainer = document.querySelector("#comments .display");
-  await  fetch(`https://backend-jdw6.onrender.com/api/likes/${id}`, {
+  await  fetch(`https://backend-jdw6.onrender.com/api/blogs/${id}/likes`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -153,7 +154,7 @@ document.getElementById("comment-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const message = document.getElementById("comment").value;
   const id = new URLSearchParams(window.location.search).get("id");
-  fetch(`https://backend-jdw6.onrender.com/api/comments/${id}`, {
+  fetch(`https://backend-jdw6.onrender.com/api/blogs/${id}/comments`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

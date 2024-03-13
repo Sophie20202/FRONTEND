@@ -1,5 +1,5 @@
 
-fetch('https://backend-jdw6.onrender.com/api/blogs')
+fetch('https://backend-jdw6.onrender.com/api/blogs/${blogId}/comments')
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
