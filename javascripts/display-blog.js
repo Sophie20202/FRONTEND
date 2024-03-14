@@ -154,7 +154,7 @@ document.getElementById("comment-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const message = document.getElementById("comment").value;
   const id = new URLSearchParams(window.location.search).get("id");
-  fetch(`https://backend-jdw6.onrender.com/api/blogs/${id}/comments`, {
+  fetch(`https://backend-jdw6.onrender.com/api/blogs/${id}/comments`,{
     method: "POST",
     headers: {
       "Content-Type": "application/json",

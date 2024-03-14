@@ -3,7 +3,8 @@ function deleteBlog(id) {
   if (!confirmDelete) {
     return;
   }
-  fetch(`https://backend-jdw6.onrender.com/api/blog/${id}`, {
+  console.log(id)
+  fetch(`https://backend-jdw6.onrender.com/api/blogs/${id}`, {
     method: "DELETE",
   })
     .then((res) => res.json())
