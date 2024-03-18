@@ -1,5 +1,8 @@
 
 window.addEventListener("DOMContentLoaded", function () {
+  // const quill = new quill('#editor', {
+  //   theme: 'snow'
+  // });
   const form = document.getElementById("articleForm");
   form.addEventListener("submit", function (e) {
     e.preventDefault();

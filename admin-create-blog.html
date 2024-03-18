@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="css/Createnewblog.css">
+  <link href="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.3/dist/quill.snow.css" rel="stylesheet" />
 </head>
 <body>
+ x
   
   <div id="blogContainer">
     <h2>Create a New Article</h2>
@@ -17,17 +19,65 @@
         <input type="text" id="title" name="title" required>
       <!-- Upload Picture -->
       <label for="picture">Upload Picture:</label>
-      <input type="file" id="picture" name="picture" accept="image/*" alt="blogs">
+      <input type="file" id="picture" name="picture" accept="image/*" alt="btn">
       <!-- Article Content -->
-      <label for="articleContent">Article Content:</label>
-      <textarea id="articleContent" name="articleContent" rows="8" required></textarea>
-
-      <!-- Submit Button -->
+      <!-- <label for="articleContent">Article Content:</label> -->
+      
+      <div id="editor">
+        <p>Hello World!</p>
+        <p>Some initial <strong>bold</strong> text</p>
+        <p><br /></p>
+      </div> 
+      <Submit Button>
       <a href="adminpanel.html">
-        <button type="submit" >Submit Article
+        <button type="submit">Submit Article
         </button></a>
     </form>
   </div>
-  <script src="./javascripts/create-blog.js"></script>
+  <!-- <script src="./javascripts/create-blog.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.3/dist/quill.js"></script> 
+  
+  <script> 
+    const quill = new Quill('#editor', {
+      theme: 'snow'
+    }); 
+
+window.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("articleForm");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+   
+    // let blogImage = processImage(fileInput);
+    var title = document.getElementById("title").value;
+    var articleContent =quill.root.innerHTML;
+    console.log(articleContent)
+    var fileInput = document.getElementById("picture");
+    let blogImage = fileInput.files[0];
+
+    const create = new FormData();
+    create.append("title", title);
+    create.append("message", articleContent);
+    create.append("image", blogImage);
+
+    fetch("https://backend-jdw6.onrender.com/api/blogs", {
+      method: "POST",
+      headers: {
+        "auth-token": `${localStorage.getItem("token")}`,
+      },
+      body: create,
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+        window.location.href = "adminpanel.html";
+      });
+  });
+});
+  </script> 
 </body>
 </html>
