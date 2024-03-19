@@ -11,13 +11,12 @@ React.useEffect(()=>{
     return(
         <div>
         {blogs.length>0 && blogs.map(blog=>(
-               <div>
+               <div className="Tread">
                 <h1>{blog.title}</h1>
-                <img src={blog.image}/>
-                {/* <p dangerouslySetInnerHTML={{ __html: blog.message }}></p> */}
-                
-                <a href={`view-blog.html?id=${blog._id}`}>readmore</a>
+                {/* <img src={blog.image}/> */}
+                <a className="readmore" href={`view-blog.html?id=${blog._id}`}>readmore</a>
                 </div> 
+                
     ))}
     </div>
   )};

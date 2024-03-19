@@ -3,7 +3,7 @@ const like=document.getElementById("like-btn")
 dislike.setAttribute("disabled","")
 const id = new URLSearchParams(window.location.search).get("id");
 
-
+console.log(id)
 document.addEventListener("DOMContentLoaded", () => {
   fetch(`https://backend-jdw6.onrender.com/api/blogs/${id}`)
     .then((response) => {
