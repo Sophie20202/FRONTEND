@@ -60,13 +60,36 @@
             <p class="address">KG314 St, Kigali, Remera</p>
           </div>
         </div>
-
-            <div  id="contact-form-react" ></div>
-          
+            <div class="form" >
+              <h2>Drop an Equiry</h2>
+              <div class="login-container">
+                <div id="messageError" class="error"></div>
+                <form class="" id="form" name="custom_form" >
+                  <div class="input-control">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" >
+                  <div id="nameError" class="error"></div>
+                 </div>
+                  <div class="input-control">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" >
+                  <div id="email" class="error"></div>
+                 </div>
+                 <div class="input-control">
+                  <label for="message">Message:</label>
+                  <textarea id="message" name="message" rows="4" ></textarea>
+                  </div>
+                  <input type="button" value="Submit"  onclick="validateForm(event)">
+              </form>
+              </div>
+              </div>
+              </div>
+            </div>
+          </div>
         
       </div>
     </div>
     <script src="./javascripts/Contact.js"></script>
-    <script type="text/babel" src="./javascripts/contactjsx.js"></script>
+   
   </body>
 </html>

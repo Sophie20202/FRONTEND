@@ -1,5 +1,5 @@
 
-const id = new URLSearchParams(window.location.search).get("id");
+
 const Singleblog = () => {
     const [, setLikeDisabled] = React.useState(false);
     const [, setDislikeDisabled] = React.useState(false);
@@ -40,7 +40,7 @@ const Singleblog = () => {
 
     console.log(selectedBlog);
     const fetchLikes = async () => {
-        const id = new URLSearchParams(window.location.search).get("id");
+    
         try {
             const response = await fetch(`https://backend-jdw6.onrender.com/api/blogs/${id}/likes`, {
                 method: "GET",
